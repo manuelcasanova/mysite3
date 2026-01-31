@@ -1,0 +1,197 @@
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem;
+}
+
+.hero h1 {
+  padding-left: 2rem;
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero h1 {
+    font-size: 1.45rem;
+  }
+}
+
+.hero-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  /* font-size: 1.9rem; */
+  opacity: 0.75;
+  margin-bottom: 2rem;
+}
+
+.hero-stack span {
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-stack span:hover {
+    color: var(--accent);
+  }
+}
+
+.hero-cta {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.75rem 1.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hero-cta:hover {
+  background-color: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Keyboard accessibility */
+.hero-cta:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(217, 119, 6, 0.35),
+    0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.hero-contact {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.hero-contact a {
+  color: inherit;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.hero-contact a:hover {
+  text-decoration: underline;
+}
+
+
+/* Optional: tone down motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .hero-cta:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+
+
+/* Desktop breathing room */
+@media (min-width: 768px) {
+  .hero-inner {
+    padding: 2rem;
+  }
+}
+
+.hero-secondary {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.hero-secondary a {
+  color: #555;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.hero-secondary a:hover {
+  text-decoration: underline;
+}
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.hero-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-eyebrow {
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.hero-headline {
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.hero-subtitle {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0.75rem 0 1.5rem;
+  
+}
+
+/* Small screens: stack vertically */
+@media (max-width: 580px) {
+  .hero-subtitle {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+
+/* Large screens, align with h1 */
+
+@media (min-width: 480px) {
+  .hero-subtitle, .hero-stack, .hero-cta, .hero-contact {
+      margin-left: 9rem;
+  }
+}

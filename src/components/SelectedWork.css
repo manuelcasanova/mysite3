@@ -1,0 +1,133 @@
+.selected-work {
+  padding: 3rem 0rem;
+  background: #fafafa;
+}
+
+.selected-work h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+
+.project-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  color: #444;
+}
+
+@media (min-width: 1024px) {
+  .project-card p {
+    font-size: 1.2rem;
+  }
+}
+
+.project-tech {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.project-tech li {
+  border: 1px solid #ddd;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: #f9f9f9;
+}
+
+
+.project-card-button {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid #bbb;
+  color: #555;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.project-card-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.project-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+
+.project-card {
+  border: 1px solid #e5e5e5;
+  padding: 1.75rem;
+  border-radius: 12px;
+  background: #ffffff;
+
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+
+
+}
+
+
+
+.project-card h3 {
+  font-weight: 600;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .project-card {
+    border-color: var(--accent);
+  }
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
