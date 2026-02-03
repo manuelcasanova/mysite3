@@ -59,20 +59,19 @@ export default function SpanishTeacher() {
             skills I now use daily as a developer.
           </p>
         </div>
+
+        <p className="page-resume-link">
+          For a detailed work history and formal training, see my{' '}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            résumé
+          </a>.
+        </p>
+
       </div>
-      
-
-      <p className="page-resume-link">
-  For a detailed work history and formal training, see my{' '}
-  <a
-    href="/resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    résumé
-  </a>.
-</p>
-
 
     </section>
   );
