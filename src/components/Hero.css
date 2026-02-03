@@ -162,6 +162,15 @@
   color: #666;
 }
 
+.hero-eyebrow-smaller {
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #666;
+}
+
 .hero-headline {
   font-size: clamp(1.8rem, 4.5vw, 3.2rem);
   line-height: 1.15;
@@ -178,6 +187,65 @@
   margin: 0.75rem 0 1.5rem;
   
 }
+
+.hero-more {
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid #bbb;
+  color: #555;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.hero-more:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+
+.hero-more-panel {
+  margin-top: 2rem;
+  max-width: 560px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.hero-more-text {
+  margin-bottom: 1.25rem;
+}
+
+
+.hero-more-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hero-more-links a {
+  border: 1px solid #ddd;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: #555;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.hero-more-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (min-width: 480px) {
+  .hero-more-panel {
+    margin-left: 9rem;
+  }
+}
+
 
 /* Small screens: stack vertically */
 @media (max-width: 580px) {

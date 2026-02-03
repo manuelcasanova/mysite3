@@ -1,6 +1,12 @@
 import './Footer.css'
+import { useState } from 'react';
+import MoreOverlay from './MoreOverlay';
 
 function Footer() {
+
+  const [showMore, setShowMore] = useState(false);
+
+
   return (
     <footer className="footer">
       <div className="footer-divider" />
@@ -37,6 +43,19 @@ function Footer() {
         >
           Resume
         </a>
+
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            setShowMore(true);
+          }}
+        >
+          More
+        </a>
+
+        {showMore && <MoreOverlay onClose={() => setShowMore(false)} />}
+
 
       </div>
     </footer>

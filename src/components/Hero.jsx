@@ -1,6 +1,15 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import MoreOverlay from './MoreOverlay';
+
 import './Hero.css'
 
 function Hero() {
+
+  const [showMore, setShowMore] = useState(false);
+
+
   return (
     <section className="hero">
 
@@ -17,6 +26,7 @@ function Hero() {
           />
           <div>
             <p className="hero-eyebrow">Manuel Casanova</p>
+            <p className="hero-eyebrow-smaller">Vancouver, BC</p>
             <h1>
               I design and build scalable web applications from frontend to backend
               to production.
@@ -62,6 +72,8 @@ function Hero() {
           </a>
         </p> */}
 
+
+
         <p className="hero-contact">
           <a
             href="https://github.com/manuelcasanova/"
@@ -94,9 +106,22 @@ function Hero() {
           >
             Resume
           </a>
+
+          <button
+            className="hero-more"
+            type="button"
+            onClick={() => setShowMore(true)}
+          >
+            + More about me
+          </button>
+
+          {showMore && (
+            <MoreOverlay onClose={() => setShowMore(false)} />
+          )}
+
+
+
         </p>
-
-
 
       </div>
     </section>
