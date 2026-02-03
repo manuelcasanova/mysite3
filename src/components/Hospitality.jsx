@@ -1,14 +1,35 @@
+import { Link } from 'react-router-dom';
+
 import './Page.css';
 
 export default function Hospitality() {
   return (
     <section className="page">
       <div className="page-inner">
-        <p className="page-eyebrow">Hospitality</p>
 
-        <h1>
-          Leadership, operations, and building strong teams in fast-paced environments
-        </h1>
+        <Link
+          to="/"
+          className="page-back"
+          onClick={() => window.scrollTo({ top: 0 })}
+        >
+          ← Back to home
+        </Link>
+
+
+        <div className="page-header">
+          <div
+            className="page-accent"
+            style={{ height: '100px', '--page-accent': '#b45309' }}
+          />
+
+          <div className="page-header-content">
+            <p className="page-eyebrow">Hospitality</p>
+            <h1>
+              Leadership, operations, and building strong teams in fast-paced environments
+            </h1>
+          </div>
+        </div>
+
 
         <p className="page-intro">
           Before moving fully into software development, I spent years working in
@@ -42,6 +63,19 @@ export default function Hospitality() {
           </p>
         </div>
       </div>
+
+      <p className="page-resume-link">
+  For a detailed work history and formal training, see my{' '}
+  <a
+    href="/resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    résumé
+  </a>.
+</p>
+
+
     </section>
   );
 }

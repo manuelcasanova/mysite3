@@ -1,14 +1,34 @@
+import { Link } from 'react-router-dom';
+
 import './Page.css';
 
 export default function SpanishTeacher() {
   return (
     <section className="page">
       <div className="page-inner">
-        <p className="page-eyebrow">Spanish Teaching</p>
 
-        <h1>
-          Teaching Spanish through structure, clarity, and real-world use
-        </h1>
+        <Link
+          to="/"
+          className="page-back"
+          onClick={() => window.scrollTo({ top: 0 })}
+        >
+          ← Back to home
+        </Link>
+
+
+        <div className="page-header">
+          <div
+            className="page-accent"
+            style={{ height: '100px', '--page-accent': '#1d4ed8' }}
+          />
+
+          <div className="page-header-content">
+            <p className="page-eyebrow">Spanish Teaching</p>
+            <h1>
+              Teaching Spanish through structure, clarity, and real-world use
+            </h1>
+          </div>
+        </div>
 
         <p className="page-intro">
           I’ve taught Spanish to students of different backgrounds and levels,
@@ -40,6 +60,20 @@ export default function SpanishTeacher() {
           </p>
         </div>
       </div>
+      
+
+      <p className="page-resume-link">
+  For a detailed work history and formal training, see my{' '}
+  <a
+    href="/resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    résumé
+  </a>.
+</p>
+
+
     </section>
   );
 }
