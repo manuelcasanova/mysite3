@@ -2,6 +2,18 @@ import './Footer.css'
 import { useState } from 'react';
 import MoreOverlay from './MoreOverlay';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGithub,
+  faLinkedin
+} from '@fortawesome/free-brands-svg-icons'
+import {
+  faEnvelope,
+  faFileLines,
+  faCircleInfo
+} from '@fortawesome/free-solid-svg-icons'
+
+
 function Footer() {
 
   const [showMore, setShowMore] = useState(false);
@@ -11,12 +23,12 @@ function Footer() {
     <footer className="footer">
       <div className="footer-divider" />
       <div className="footer-content">
-
         <a
           href="https://github.com/manuelcasanova/"
           target="_blank"
           rel="noopener noreferrer"
         >
+          <FontAwesomeIcon icon={faGithub} />
           GitHub
         </a>
 
@@ -25,6 +37,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
+          <FontAwesomeIcon icon={faLinkedin} />
           LinkedIn
         </a>
 
@@ -33,6 +46,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
+          <FontAwesomeIcon icon={faEnvelope} />
           Email
         </a>
 
@@ -41,23 +55,24 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
+          <FontAwesomeIcon icon={faFileLines} />
           Resume
         </a>
 
         <a
           href="#"
           onClick={(e) => {
-            e.preventDefault();
-            setShowMore(true);
+            e.preventDefault()
+            setShowMore(true)
           }}
         >
+          <FontAwesomeIcon icon={faCircleInfo} />
           More
         </a>
 
         {showMore && <MoreOverlay onClose={() => setShowMore(false)} />}
-
-
       </div>
+
     </footer>
   )
 }

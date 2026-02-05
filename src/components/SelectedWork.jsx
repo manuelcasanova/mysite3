@@ -8,6 +8,7 @@ function SelectedWork() {
 
         <div className="projects">
           {/* Project 1 — DNZIFY */}
+          <div id="dnzify" className="anchor-offset" />
           <article className="project-card">
             <h3>DNZIFY</h3>
             <p>
